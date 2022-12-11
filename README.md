@@ -5,7 +5,7 @@ This is a simple proof of concept (POC) for mapping XRPL secrets to Ethereum key
 ## Overview
 Recently there has been a lot of exciting discussion about the XRPL EVM sidechain and the devnet launch. Currently, in order to access the EVM sidechain you need to maintain separate wallets, one for the XRPL side and one for the EVM side. This is because the XRPL and EVM use different key pairs and address formats.
 
-This got me thinking about the possibility of mapping XRPL secret keys to Ethereum key pairs. This would allow users to use their XRPL secret to generate an Ethereum address, and use that address to interact with Ethereum smart contracts on the EVM sidechain. This would allow for seamless integration between the XRPL and EVM sidechains from the perspective of the user.
+It's not a great user experience tbh. So.. what can be done? One potential solution could be mapping XRPL secret keys to Ethereum key pairs. This would allow users to use their XRPL secret to generate an Ethereum address, and use that address to interact with Ethereum smart contracts on the EVM sidechain. This would allow for seamless integration between the XRPL and EVM sidechains from the perspective of the user.
 
 ## How it works
 Ethereum based wallets are typically generated from a 12 word mnemonic phrase. This phrase is used to generate a private key, which is then used to generate a public key. The public key is then used to generate an Ethereum address. 

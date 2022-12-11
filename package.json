@@ -1,0 +1,28 @@
+{
+  "name": "xrpl-evm-wallet",
+  "version": "1.0.0",
+  "description": "Maps XRPL secret keys to EVM keypairs",
+  "main": "demo.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "xrpl-evm-wallet"
+  },
+  "keywords": [
+    "evm",
+    "xrpl",
+    "wallet",
+    "ethereum",
+    "mapping",
+    "sidechain"
+  ],
+  "author": "hazardcookie",
+  "license": "MIT",
+  "dependencies": {
+    "ethereumjs-util": "^7.1.5",
+    "ripple-keypairs": "^1.1.4",
+    "xrpl": "^2.6.0"
+  }
+}

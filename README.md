@@ -1,4 +1,4 @@
-# Xrpl-Evm-Keypair-Mapping: Proof of Concept
+# XRPL EVM Wallet: Proof of Concept 
 
 This is a simple proof of concept (POC) for mapping XRPL secrets to Ethereum key pairs. It is not intended for production use. 
 

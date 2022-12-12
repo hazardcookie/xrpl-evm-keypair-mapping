@@ -1,9 +1,7 @@
 {
-  "wallet": {
-    "xrplAddr": "rDJaxsACBRnPv1qWVrnMamdFtGiHShidWm",
-    "xrplSecret": "sn3Ghj4ACr65U4ZUkyhZohhax7Pzp",
-    "mappedEvmPrivateKey": "000000736e3347686a34414372363555345a556b79685a6f6868617837507a70",
-    "mappedEvmPublicKey": "e6b1ac3079ce616d72e4939e9bda391ac89ab589bee3982ea3ef4d7ebe5bf119866e4d53568ab90f0c5a45b466d0fdd027747f4686728f4409be3c4ed3a263b4",
-    "mappedEvmPublicAddr": "0xd0850aa8ddb1e55c3648dd041ab28f816f8d438e"
-  }
+  "xrplAddr": "rLyB2JJd4PXJRLQ9HTJ4TxEJ5kK6kyvHdT",
+  "xrplSecret": "sssy5SsCSDjk6vJ29uN9YoAEWThZ5",
+  "mappedEvmPrivateKey": "000000737373793553734353446a6b36764a3239754e39596f41455754685a35",
+  "mappedEvmPublicKey": "86487c1f3c43e91729ef9856c26914bfe1ea9e6a6493b183cad54de8637e019facda84c904ce52e5b37f45128d0a56a15e5625204cd68112e2feb115e6ad336b",
+  "mappedEvmPublicAddr": "0xdc6f32aa1d7e0a0bc6b035b6e9aa9792eeac6007"
 }

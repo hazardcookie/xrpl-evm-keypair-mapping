@@ -33,9 +33,9 @@ const main = async () => {
   // Save the mapped wallet to json file
   saveData(mapped, './data/mappedWallet.json')
   console.log('Mapped wallet:')
-  console.log(mapped.wallet)
+  console.log(mapped)
 
-  bridge(XrplWallet, mapped.wallet.mappedEvmPublicAddr.toLowerCase(), '900')
+  bridge(XrplWallet, mapped.mappedEvmPublicAddr.toLowerCase(), '900')
 }
 
 main()

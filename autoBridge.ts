@@ -5,37 +5,37 @@
  * It then bridges the XRPL wallet to the EVM sidechain
  * By: @hazardcookie
  * 12/12/2022
-*/
+ */
 
-import { generateFundedWallet } from "@thebettermint/xrpl-auto-funder";
-import { Wallet } from "xrpl";
-import { bridge } from "./src/bridge";
-import { saveData } from "./src/utils";
-import mapXrplSecretToEvm from "./src/mapping";
+import { generateFundedWallet } from '@thebettermint/xrpl-auto-funder'
+import { Wallet } from 'xrpl'
+import { bridge } from './src/bridge'
+import { saveData } from './src/utils'
+import mapXrplSecretToEvm from './src/mapping'
 
 // Generate funded XRPL devnet wallet
 const devnetFaucet = async () => {
-  let wallet = await generateFundedWallet("devnet");
-  saveData(wallet, "./data/devnetWallet.json");
-  return wallet;
-};
+  let wallet = await generateFundedWallet('devnet')
+  saveData(wallet, './data/devnetWallet.json')
+  return wallet
+}
 
 const main = async () => {
   // Get the funded XRPL devnet wallet
-  const devnetWallet = await devnetFaucet();
+  const devnetWallet = await devnetFaucet()
 
   // Get the XRPL keypair from the secret
-  const XrplWallet = Wallet.fromSeed(devnetWallet.account.secret);
+  const XrplWallet = Wallet.fromSeed(devnetWallet.account.secret)
 
   // Map the XRPL secret to an EVM keypair
-  const mapped = mapXrplSecretToEvm(devnetWallet.account.secret);
+  const mapped = mapXrplSecretToEvm(devnetWallet.account.secret)
 
   // Save the mapped wallet to json file
-  saveData(mapped, "./data/mappedWallet.json");
-  console.log("Mapped wallet:");
-  console.log(mapped.wallet);
+  saveData(mapped, './data/mappedWallet.json')
+  console.log('Mapped wallet:')
+  console.log(mapped.wallet)
 
-  bridge(XrplWallet, mapped.wallet.mappedEvmPublicAddr.toLowerCase(), "900");
-};
+  bridge(XrplWallet, mapped.wallet.mappedEvmPublicAddr.toLowerCase(), '900')
+}
 
-main();
+main()

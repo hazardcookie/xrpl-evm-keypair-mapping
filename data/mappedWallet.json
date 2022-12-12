@@ -1,0 +1,9 @@
+{
+  "wallet": {
+    "xrplAddr": "rDJaxsACBRnPv1qWVrnMamdFtGiHShidWm",
+    "xrplSecret": "sn3Ghj4ACr65U4ZUkyhZohhax7Pzp",
+    "mappedEvmPrivateKey": "000000736e3347686a34414372363555345a556b79685a6f6868617837507a70",
+    "mappedEvmPublicKey": "e6b1ac3079ce616d72e4939e9bda391ac89ab589bee3982ea3ef4d7ebe5bf119866e4d53568ab90f0c5a45b466d0fdd027747f4686728f4409be3c4ed3a263b4",
+    "mappedEvmPublicAddr": "0xd0850aa8ddb1e55c3648dd041ab28f816f8d438e"
+  }
+}

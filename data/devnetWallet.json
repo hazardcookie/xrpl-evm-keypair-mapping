@@ -1,0 +1,11 @@
+{
+  "type": "devnet",
+  "account": {
+    "xAddress": "TVn3uodpdAcGcGGk2PoLdRZNbKNCxgSKQ671VzdiWWpXJh9",
+    "secret": "sn3Ghj4ACr65U4ZUkyhZohhax7Pzp",
+    "classicAddress": "rDJaxsACBRnPv1qWVrnMamdFtGiHShidWm",
+    "address": "rDJaxsACBRnPv1qWVrnMamdFtGiHShidWm"
+  },
+  "amount": 1000,
+  "balance": 1000
+}

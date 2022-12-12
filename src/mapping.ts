@@ -4,6 +4,7 @@
 
 import { privateToPublic, privateToAddress } from "ethereumjs-util";
 import { Wallet } from "xrpl";
+import { mappedWallet } from "./types/Wallet";
 
 /*
  * Takes an xrpl secret and returns an object with both xrpl and ethereum key pairs
@@ -11,11 +12,7 @@ import { Wallet } from "xrpl";
  * @returns {object} - object with the ethereum address and private key
  */
 export default function mapXrplSecretToEvm(xrplSecretKey: string): {
-  xrplAddr: string;
-  xrplSecret: string;
-  mappedPrivateKey: string;
-  mappedPublicKey: string;
-  mappedPublicAddr: string;
+  wallet: mappedWallet;
 } {
   // Get the XRPL keypair from the secret
   const xrplWallet = Wallet.fromSeed(xrplSecretKey);
@@ -36,10 +33,12 @@ export default function mapXrplSecretToEvm(xrplSecretKey: string): {
   const publicAddr = privateToAddress(mappedPrivateKey).toString("hex");
 
   return {
-    xrplAddr: `${xrplWallet.address}`,
-    xrplSecret: `${xrplWallet.seed}`,
-    mappedPrivateKey: mappedPrivateKey.toString("hex"),
-    mappedPublicKey: `${publicKey}`,
-    mappedPublicAddr: `0x${publicAddr}`,
+    wallet: {
+      xrplAddr: `${xrplWallet.address}`,
+      xrplSecret: `${xrplWallet.seed}`,
+      mappedEvmPrivateKey: mappedPrivateKey.toString("hex"),
+      mappedEvmPublicKey: `${publicKey}`,
+      mappedEvmPublicAddr: `0x${publicAddr}`,
+    },
   };
 }

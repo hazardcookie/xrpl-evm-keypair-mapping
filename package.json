@@ -2,13 +2,13 @@
   "name": "xrpl-evm-keypair-mapping",
   "version": "1.0.0",
   "description": "Maps XRPL secret keys to EVM keypairs",
-  "main": "demo.js",
+  "main": "demo.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "xrpl-evm-wallet"
+    "url": "https://github.com/hazardcookie/xrpl-evm-keypair-mapping.git"
   },
   "keywords": [
     "evm",

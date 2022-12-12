@@ -32,8 +32,6 @@ const main = async () => {
 
   // Save the mapped wallet to json file
   saveData(mapped, "./data/mappedWallet.json");
-
-  // print the mapped wallet object values
   console.log("Mapped wallet:");
   console.log(mapped.wallet);
 

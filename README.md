@@ -28,7 +28,8 @@ To accomplish this, the POC uses the following steps:
 
 To see the mapping function in action, run `ts-node demo.ts`. This will generate a random XRPL secret, map it to an Ethereum key pair, and print the results to the console.
 
-The actual mapping function is in `src/mapping.js`. It takes an XRPL secret as a string and returns an object containing the XRPL address, XRPL secret, Ethereum private key, Ethereum public key, and Ethereum address.
+Link to mapping.ts in markdown:
+The actual mapping function is in [src/mapping.js](https://github.com/hazardcookie/xrpl-evm-keypair-mapping/blob/main/src/mapping.ts). It takes an XRPL secret as a string and returns an object containing the XRPL address, XRPL secret, Ethereum private key, Ethereum public key, and Ethereum address.
 
 ## Example Mapping Output
 ```

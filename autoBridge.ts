@@ -10,8 +10,8 @@
 import { generateFundedWallet } from "@thebettermint/xrpl-auto-funder";
 import { Wallet } from "xrpl";
 import { bridge } from "./src/bridge";
-import mapXrplSecretToEvm from "./src/mapping";
 import { saveData } from "./src/utils";
+import mapXrplSecretToEvm from "./src/mapping";
 
 // Generate funded XRPL devnet wallet
 const devnetFaucet = async () => {

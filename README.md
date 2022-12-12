@@ -22,11 +22,11 @@ To accomplish this, the POC uses the following steps:
 5. Use the Ethereum key pair to generate an Ethereum address
 
 ## Usage
-1. Clone the repo
-2. Run `npm install`
-3. Run demo script `node demo.js`
+1. Clone the repo `git clone https://github.com/hazardcookie/xrpl-evm-keypair-mapping.git`
+2. Run `npm install` or `yarn`
+3. Run demo script `ts-node demo.ts`
 
-To see the mapping function in action, run `node demo.js`. This will generate a random XRPL secret, map it to an Ethereum key pair, and print the results to the console.
+To see the mapping function in action, run `ts-node demo.ts`. This will generate a random XRPL secret, map it to an Ethereum key pair, and print the results to the console.
 
 The actual mapping function is in `src/mapping.js`. It takes an XRPL secret as a string and returns an object containing the XRPL address, XRPL secret, Ethereum private key, Ethereum public key, and Ethereum address.
 

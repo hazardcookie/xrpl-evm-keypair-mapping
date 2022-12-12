@@ -7,14 +7,15 @@
 */
 
 // Import ripple-keypairs to generate XRPL random secrets
-const rippleKeypairs = require('ripple-keypairs');
+import rippleKeypairs from 'ripple-keypairs';
 
 // Import mappping function
-const mapXrplSecretToEvm = require('./src/mapping');
+import mapXrplSecretToEvm from './src/mapping';
 
 // Generate a random XRPL secret
 // Algorithm options: ed25519 or ecdsa-secp256k1
 const xrplSecret = rippleKeypairs.generateSeed( { algorithm: "ecdsa-secp256k1" } );
+console.log(xrplSecret);
 
 // Map the XRPL secret to an EVM keypair
 const evmKeypair = mapXrplSecretToEvm(xrplSecret);

@@ -5,7 +5,7 @@
  * It then bridges the XRPL wallet to the EVM sidechain
  * By: @hazardcookie
  * 12/12/2022
- */
+*/
 
 import { generateFundedWallet } from "@thebettermint/xrpl-auto-funder";
 import { Wallet } from "xrpl";

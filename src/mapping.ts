@@ -8,7 +8,7 @@ import { Wallet } from 'xrpl'
 /*
  * Takes an xrpl secret and returns an object with both xrpl and ethereum key pairs
  * @param {string} xrplSecretKey - xrpl secret key
- * @returns {object} - object with both the xrpl and ethereum addresss + private keys
+ * @returns {object} - object with both the xrpl and mapped EVM keypairs
 */
 export default function mapXrplSecretToEvm(xrplSecretKey: string): {
   xrplAddr: string

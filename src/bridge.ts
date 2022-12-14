@@ -23,7 +23,7 @@ export async function bridge(wallet: Wallet, evmWalletAddress: string, amount: s
 
   console.log(
     `View your mapped EVM sidechain wallet: \n https://evm-sidechain.xrpl.org/address/${evmWalletAddress} \n
-         Note: It may take a few minutes for the transaction to appear on the explorer.`,
+    Note: It may take a few minutes for the transaction to appear on the explorer.`,
   )
 
   return submit

@@ -38,26 +38,25 @@ export async function signSubmitAndWait(transaction: any, wallet: any) {
   }
 }
 
-
 // the function above but with a promise and in valid typescript
 export async function createWallet(): Promise<any> {
-    const faucet = "https://faucet.devnet.rippletest.net/accounts"
+  const faucet = 'https://faucet.devnet.rippletest.net/accounts'
 
-    const requestConfig = {
-        method: 'post',
-        url: faucet,
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    };
+  const requestConfig = {
+    method: 'post',
+    url: faucet,
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  }
 
-    return new Promise((resolve, reject) => {
-        axios(requestConfig)
-            .then(response => {
-                resolve(response.data.account)
-            })
-            .catch(error => {
-                reject(error)
-            })
-    })
+  return new Promise((resolve, reject) => {
+    axios(requestConfig)
+      .then((response) => {
+        resolve(response.data.account)
+      })
+      .catch((error) => {
+        reject(error)
+      })
+  })
 }

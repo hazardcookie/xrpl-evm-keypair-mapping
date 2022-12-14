@@ -1,10 +1,10 @@
 {
   "type": "devnet",
   "account": {
-    "xAddress": "TVQWraJWDv2g1S71eq37F1z94hR68EnrDRxmxgscV7d645h",
-    "secret": "ss9MQHo8NLqCsEUqds7GRNturCLER",
-    "classicAddress": "rKNmEEx4UGdGUQCUgHxeMrCcW83ihsndzx",
-    "address": "rKNmEEx4UGdGUQCUgHxeMrCcW83ihsndzx"
+    "xAddress": "T7d7N38gEmrBGzLQ9a85puWjkngiicEAM2mHeqQiMn8J3tR",
+    "secret": "ssr83nBPn43vxwHXYXgAvXbfTkRA6",
+    "classicAddress": "rnRELZajEA52ST7UPcPpKtaHf1ojn3xJkh",
+    "address": "rnRELZajEA52ST7UPcPpKtaHf1ojn3xJkh"
   },
   "amount": 1000,
   "balance": 1000

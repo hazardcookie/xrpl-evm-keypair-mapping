@@ -13,16 +13,11 @@ import { bridge } from './src/bridge'
 import { saveData } from './src/utils'
 import mapXrplSecretToEvm from './src/mapping'
 
-// Generate funded XRPL devnet wallet
-const devnetFaucet = async () => {
-  let wallet = await generateFundedWallet('devnet')
-  saveData(wallet, './data/devnetWallet.json')
-  return wallet
-}
 
 const main = async () => {
   // Get the funded XRPL devnet wallet
-  const devnetWallet = await devnetFaucet()
+  const devnetWallet = await generateFundedWallet('devnet')
+  saveData(devnetWallet, './data/devnetWallet.json')
 
   // Get the XRPL keypair from the secret
   const XrplWallet = Wallet.fromSeed(devnetWallet.account.secret)

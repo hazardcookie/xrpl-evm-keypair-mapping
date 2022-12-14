@@ -1,6 +1,6 @@
 import { writeFile } from 'fs'
-
 import { Client } from 'xrpl'
+import axios from 'axios'
 
 // Save response data to file
 export async function saveData(data: any, path: string) {
@@ -36,4 +36,28 @@ export async function signSubmitAndWait(transaction: any, wallet: any) {
     // @ts-ignore
     return ts_result.result.meta.TransactionResult
   }
+}
+
+
+// the function above but with a promise and in valid typescript
+export async function createWallet(): Promise<any> {
+    const faucet = "https://faucet.devnet.rippletest.net/accounts"
+
+    const requestConfig = {
+        method: 'post',
+        url: faucet,
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    };
+
+    return new Promise((resolve, reject) => {
+        axios(requestConfig)
+            .then(response => {
+                resolve(response.data.account)
+            })
+            .catch(error => {
+                reject(error)
+            })
+    })
 }

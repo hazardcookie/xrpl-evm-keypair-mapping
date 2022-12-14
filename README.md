@@ -3,14 +3,15 @@
 This is a simple proof of concept (POC) for mapping XRPL secrets to Ethereum key pairs. It is not intended for production use. 
 
 ## Overview
-Recently there has been a lot of exciting discussion about the XRPL EVM sidechain and the devnet launch. Currently, in order to access the EVM sidechain you need to maintain separate wallets, one for the XRPL side and one for the EVM side. This is because the XRPL and EVM use different key pairs and address formats.
+Recently there has been a lot of exciting discussion about the XRPL EVM sidechain devnet launch. Currently, in order to access the EVM sidechain devnet you need to maintain separate wallets, one for the XRPL side and one for the EVM side. This is because the XRPL and EVM use different key pairs and address formats.
 
-It's not a great user experience tbh. So.. what can be done? One potential solution could be mapping XRPL secret keys to Ethereum key pairs. This would allow users to use their XRPL secret to generate an Ethereum address, and use that address to interact with Ethereum smart contracts on the EVM sidechain. This would allow for seamless integration between the XRPL and EVM sidechains from the perspective of the user.
+It's not a great user experience tbh. So.. what can be done? One potential solution could be mapping XRPL secret keys to Ethereum key pairs. This would allow users to use their XRPL secret to generate an Ethereum address, and use that address to interact with Ethereum smart contracts on the EVM sidechain. This in turn would allow for a seamless integration between the XRPL and EVM sidechains from the perspective of the user.
+
 
 ## How it works
 Ethereum based wallets are typically generated from a 12 word mnemonic phrase. This phrase is used to generate a private key, which is then used to generate a public key. The public key is then used to generate an Ethereum address. 
 
-This POC maps an XRPL secret key to an Ethereum private key. It does not use a mnemonic phrase, but instead uses the XRPL secret directly. The idea here is: If you have generated an XRPL seed from a sufficient source of randomness, then it should be safe to use that seed to generate a corresponding Ethereum private key.
+This POC maps an XRPL secret key to an Ethereum private key. It does not use a mnemonic phrase, but instead uses the XRPL secret directly. The idea here is: If you have generated an XRPL seed from a source with sufficient randomness, then it should be safe to use that seed to generate a corresponding Ethereum private key.
 
 Ethereum private keys can be represented as a 64 character hex string. To map an XRPL secret to a valid Ethereum private key, the XRPL secret is converted to a hex string and padded with leading zeros to 64 characters. 
 

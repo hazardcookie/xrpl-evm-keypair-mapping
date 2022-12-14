@@ -35,7 +35,7 @@ const main = async () => {
   console.log('Mapped wallet:')
   console.log(mapped)
 
-  bridge(XrplWallet, mapped.mappedEvmPublicAddr.toLowerCase(), '900')
+  await bridge(XrplWallet, mapped.mappedEvmPublicAddr.toLowerCase(), '900')
 }
 
 main()

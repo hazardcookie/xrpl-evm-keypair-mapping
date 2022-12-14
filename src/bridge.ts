@@ -17,7 +17,7 @@ export async function bridge(wallet: Wallet, evmWalletAddress: string, amount: s
     ],
   }
 
-  validate(transactionSetup)
+  //validate(transactionSetup)
   const submit = await signSubmitAndWait(transactionSetup, wallet)
   saveData(submit, './data/bridgeTx.json')
 
